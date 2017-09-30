@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Home from './src/screens/Home';
 import APIsList from './src/screens/APIsList';
+import CallWithParameters from './src/screens/CallWithParameters';
 
 const HomeScreen = StackNavigator({
   Settings: {
@@ -14,6 +15,9 @@ const HomeScreen = StackNavigator({
   },
   APIsList: {
     screen: APIsList
+  },
+  CallWithParameters: {
+    screen: CallWithParameters
   }
 }, {
   headerMode: 'screen'
