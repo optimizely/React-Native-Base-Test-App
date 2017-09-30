@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Home from './src/screens/Home';
-import APIs from './src/screens/APIs';
+import APIsList from './src/screens/APIsList';
 
 const HomeScreen = StackNavigator({
   Settings: {
@@ -12,8 +12,8 @@ const HomeScreen = StackNavigator({
       headerBackTitle: 'Home'
     }
   },
-  APIs: {
-    screen: APIs
+  APIsList: {
+    screen: APIsList
   }
 }, {
   headerMode: 'screen'

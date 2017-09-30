@@ -6,7 +6,7 @@ import {
   View
 } from 'react-native';
 
-export default class APIs extends Component {
+export default class APIsList extends Component {
   render () {
     const { navigate, state: { params } } = this.props.navigation;
       return (
