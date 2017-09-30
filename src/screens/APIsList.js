@@ -33,6 +33,7 @@ export default class APIsList extends Component {
             renderItem={({item}) => <Button
               onPress={() => {
                 console.log("button pressed");
+                navigate('CallWithParameters');
               }}
               title={item.key}
             />}
