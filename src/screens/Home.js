@@ -6,9 +6,9 @@ import {
   View
 } from 'react-native';
 import HeaderButton from '../components/HeaderButton';
+import APIs from './APIs';
 
 export default class Home extends Component {
-
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -17,7 +17,7 @@ export default class Home extends Component {
           What would you like to test?
         </Text>
         <Button
-          // onPress{() => navigate('someScreen')}
+          onPress={() => navigate('APIs')}
           title="APIs"
         />
       </View>

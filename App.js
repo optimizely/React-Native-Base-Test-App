@@ -2,14 +2,18 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Home from './src/screens/Home';
+import APIs from './src/screens/APIs';
 
 const HomeScreen = StackNavigator({
   Settings: {
     screen: Home,
     navigationOptions: {
       header: null,
-      headerBackTitle: 'headerBackTitle'
+      headerBackTitle: 'Home'
     }
+  },
+  APIs: {
+    screen: APIs
   }
 }, {
   headerMode: 'screen'
