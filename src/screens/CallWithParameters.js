@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  Button,
   StyleSheet,
   Text,
   TextInput,
@@ -25,6 +26,12 @@ export default class CallWithParameters extends Component {
             placeholder='placeholder text'
             placeholderTextColor='darkgray'
             returnKeyType='next'
+          />
+          <Button
+            title="Next"
+            onPress={() => {
+              console.log("Next pressed.");
+            }}
           />
           </View>
         </View>
