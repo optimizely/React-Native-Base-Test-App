@@ -1,0 +1,17 @@
+target 'SDK_Driver_App' do
+  platform :ios, '10.3'
+  use_frameworks!
+  pod 'OptimizelySDKiOS', :git => 'https://github.com/optimizely/objective-c-sdk.git', :branch => 'master'
+  pod 'OptimizelySDKDatafileManager', :git => 'https://github.com/optimizely/objective-c-sdk.git', :branch => 'master'
+  pod 'OptimizelySDKEventDispatcher', :git => 'https://github.com/optimizely/objective-c-sdk.git', :branch => 'master'
+  pod 'OptimizelySDKUserProfileService', :git => 'https://github.com/optimizely/objective-c-sdk.git', :branch => 'master'
+  pod 'OptimizelySDKShared', :git => 'https://github.com/optimizely/objective-c-sdk.git', :branch => 'master'
+  pod 'OptimizelySDKCore', :git => 'https://github.com/optimizely/objective-c-sdk.git', :branch => 'master'
+end
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |configuration|
+      target.build_settings(configuration.name)['ONLY_ACTIVE_ARCH'] = 'NO'
+    end
+  end
+end
